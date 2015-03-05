@@ -1,6 +1,3 @@
-var ftp = require("ftp")
-function HelloWorld () {
-	console.log('Hello world!')
-}
+var TestMe = require('./requireMe.js')// ('cats')
 
-HelloWorld();
+// console.log(test)
