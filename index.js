@@ -1,3 +1,1 @@
-var TestMe = require('./requireMe.js')// ('cats')
-
-// console.log(test)
+var TestMe = require('./requireMe.js')({'alertOnFail': false})
