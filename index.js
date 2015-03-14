@@ -1,3 +1,3 @@
-var TestMe = require('./requireMe.js')// ('cats')
+var TestMe = require('./requireMe.js').call(this, 'cats')//('cats')
 
 // console.log(test)
