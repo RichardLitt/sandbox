@@ -1,3 +1,3 @@
-var TestMe = require('./requireMe.js').call(this, 'cats')//('cats')
+import fs from 'fs';
 
-// console.log(test)
+console.log('fs', fs)
