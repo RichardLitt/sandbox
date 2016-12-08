@@ -1,3 +1,10 @@
-var TestMe = require('./requireMe.js').call(this, 'cats')//('cats')
+const wallpaper = require('wallpaper');
 
-// console.log(test)
+wallpaper.set('unicorn.jpg').then(() => {
+    console.log('done');
+});
+
+wallpaper.get().then(imagePath => {
+    console.log(imagePath);
+    //=> '/Users/sindresorhus/unicorn.jpg'
+});
