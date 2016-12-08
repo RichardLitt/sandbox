@@ -1,0 +1,28 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "This is for hacking on shit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichardLitt/sandbox.git"
+  },
+  "keywords": [],
+  "author": "Richard Littauer <richard.littauer@gmail.com> (http://burntfen.com)",
+  "license": "=",
+  "bugs": {
+    "url": "https://github.com/RichardLitt/sandbox/issues"
+  },
+  "homepage": "https://github.com/RichardLitt/sandbox#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "escape-string-regexp": "^1.0.5",
+    "graceful-fs": "^4.1.11",
+    "replacestream": "^4.0.2",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}
