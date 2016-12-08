@@ -23,6 +23,7 @@
     "graceful-fs": "^4.1.11",
     "replacestream": "^4.0.2",
     "request": "^2.79.0",
-    "request-promise": "^4.1.1"
+    "request-promise": "^4.1.1",
+    "string-replace-async": "^1.2.0"
   }
 }

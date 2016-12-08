@@ -1,27 +1,26 @@
-const request = require('request')
-const fs = require('graceful-fs')
 const path = require('path')
 const escapeRegExp = require('escape-string-regexp')
+const Promise = require('bluebird')
+const rp = require('request-promise')
+const stringReplaceAsync = require('string-replace-async')
+
+var readFile = Promise.promisify(require('fs').readFile)
 
 function addURL (match) {
-  return request({
+  return rp({
       method: 'GET',
       uri: 'https://hackmd.io/new',
       resolveWithFullResponse: true
-    }, (err, response, body) => {
-      if (err) { throw 'Cannot get url'}
-
+    }).then((response) => {
       return '[test](' + response.request.href + ')'
     })
 }
 
 function checkFileContents (input) {
-  fs.readFile(input, 'utf8', (err, res) => {
-    if (err) { throw 'Unable to read file'}
-
-    var result = res.replace(new RegExp(escapeRegExp('[test]()'), 'g'), addURL)
-
-    console.log(result)
+  readFile(input, 'utf8').then((res) => {
+    return stringReplaceAsync(res, new RegExp(escapeRegExp('[test]()'), 'g'), addURL)
+  }).then((response) => {
+    console.log(response)
   })
 }
 
