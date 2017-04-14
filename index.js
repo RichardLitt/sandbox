@@ -1,0 +1,2 @@
+var atob = require('atob')
+
