@@ -1,0 +1,22 @@
+{
+  "espresso": {
+    "type": "espresso",
+    "strength": 5,
+    "delicious": true
+  },
+  "americano" : {
+    "type": "espresso",
+    "strength": 3,
+    "delicious": true
+  },
+  "allonge": {
+    "type": "espresso",
+    "strength": 4,
+    "delicious": true
+  },
+  "filter": {
+    "type": "filter",
+    "strength": 1,
+    "delicious": true
+  }
+}
